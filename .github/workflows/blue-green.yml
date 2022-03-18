@@ -74,11 +74,11 @@ jobs:
           cluster-name: ${{ env.AKS_CLUSTER_NAME }}
           resource-group: ${{ env.RESOURCE_GROUP }}
 
-      - name: Failing
-        uses: actions/github-script@v3
-        with:
-          script: |
-            core.setFailed('Failed!')
+      #- name: Failing
+      #  uses: actions/github-script@v3
+      #  with:
+      #    script: |
+      #      core.setFailed('Failed!')
 
       - name: Promote App
         uses: azure/k8s-deploy@v1.3
